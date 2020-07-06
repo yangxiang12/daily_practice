@@ -21,3 +21,19 @@ def solution(s):
             dic[val] = idx
             res = max(res, idx - k)
     return res
+
+
+def s(s):
+    resp = []
+    for index in range(len(s)):
+        result = []
+        for letter in s[index:]:
+            if letter not in result:
+                result.append(letter)
+            else:
+                resp.append(result)
+            break
+    return max([len(item) for item in resp])
+
+
+print(s("asdafg"))
